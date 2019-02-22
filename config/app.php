@@ -186,6 +186,9 @@ return [
         //service provider for html purifier
         Mews\Purifier\PurifierServiceProvider::class,
 
+        //for scout alogola search
+        Laravel\Scout\ScoutServiceProvider::class,
+
 
     ],
 

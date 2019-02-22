@@ -79,4 +79,15 @@ class blogController extends Controller
         return view('single')->with('post',$post)->with('categories',$categories);
     }
 
+    public function getSearch(Request $request)
+    {
+        if($request->has('q')){
+            $post = Post::search($request->q)->paginate(3);
+        }else{
+            $post = Post::orderBy('created_at', 'desc')->paginate(3);
+        }
+        $categories = Category::all();
+        return view('allposts')->with('posts',$post)->with('categories',$categories);
+    }
+
 }
