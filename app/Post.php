@@ -3,12 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Post extends Model
 {
     //
     protected $table = 'posts';
     protected $primaryKey = 'id';
+
+    use Searchable;
 
     protected $fillable = [
         'post_title', 'post_description',
@@ -24,5 +27,10 @@ class Post extends Model
 
     public function comments(){
         return $this->hasMany('App\Comment');
+    }
+
+    public function searchableAs()
+    {
+        return 'post_title';
     }
 }

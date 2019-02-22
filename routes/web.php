@@ -25,6 +25,7 @@ Route::get('catposts/{id}', 'blogController@getCatPost');
 
 Route::get('contact', 'blogController@getContact');
 Route::post('contact', 'blogController@postContact');
+Route::get('search', ['uses' => 'blogController@getSearch', 'as' => 'search']);
 //Route::get('single/{id}', 'blogController@getSingle');
 
 //comments
@@ -47,4 +48,9 @@ Route::group( ['middleware' => 'auth' ], function()
 Auth::routes();
 Route::get('home','HomeController@index')->name('index');
 
-
+//clear-cache
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+	return '<h1>Cache facade value cleared</h1>';
+    // return what you want
+});
