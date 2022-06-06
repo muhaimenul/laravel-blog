@@ -1,50 +1,76 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<h1 align="center">Laravel Blog</h1>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## About Laravel Blog
 
-## About Laravel
+Laravel Blog is minimal blogging platform developed in [Laravel](http://laravel.com/) 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+This project contains technologies:
+* [Bootstrap](https://getbootstrap.com/)
+* [jQuery](https://jquery.com/)
+* [TinyMCE](https://www.tinymce.com/) 
+* [Scout](https://github.com/laravel/scout)
+* [Algolia Search System for full text-searching](https://www.algolia.com/doc/framework-integration/laravel/getting-started/introduction-to-scout-extended/?client=php)
+* [Intervention Image for optimizing images](https://image.intervention.io)
+* [Font Awesome](http://fontawesome.io/)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+It also covers (not limited to) the laravel framework's features like:
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+- [Authentication](https://laravel.com/docs/authentication)
+- [Blade](https://laravel.com/docs/blade)
+- [Broadcasting](https://laravel.com/docs/broadcasting)
+- [Cache](https://laravel.com/docs/cache)
+- [Email Verification](https://laravel.com/docs/verification)
+- [Filesystem](https://laravel.com/docs/filesystem)
+- [Helpers](https://laravel.com/docs/helpers)
+- [Eloquent Relationships](https://laravel.com/docs/eloquent-relationships)
+- [Localization](https://laravel.com/docs/localization)
+- [Mail](https://laravel.com/docs/mail)
+- [Migrations](https://laravel.com/docs/migrations)
+- [Providers](https://laravel.com/docs/providers)
+- [Requests](https://laravel.com/docs/validation#form-request-validation)
+- [Seeding & Factories](https://laravel.com/docs/seeding)
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+## Requirements
+- Composer
+- PHP >= 5.6.4
+- PHP extensions (PDO, SQLite, OpenSSL, Mbstring, Tokenizer)
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+## Installation
 
-## Laravel Sponsors
+1. Clone the project: `git clone https://github.com/muhaimenul/laravel-blog`
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+2. Go to the root of your project and run `composer install`
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
+3. Run `npm install` to install all frontend dependencies
 
-## Contributing
+4. Create an env file `cp .env.example .env` and add related data
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+5. Run `php artisan key:generate`
 
-## Security Vulnerabilities
+6. Add  permissions to storage and bootstrap: `sudo chmod -R 777 ./storage ./bootstrap`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+7. Run `php artisan vendor:publish` to publish vendor files
+
+8. Run `php artisan migrate` to create database tables
+
+
+## Core Features
+
+* Dashboard for Admin and editor
+* Manage Articles section
+* Manage Tags section
+* Manage Categories section
+* Fast and smooth full-text searching with Algolia Search
+* Markdown editor - TinyMce
+* Optmized media manager allows upload images
+* Responsive Layout
+* Contact Mail Form
+* Personal Portfolio page
+
+
+## Author
+Feel free to email to Muhaimenul Islam at i..muhaimen@gmail.com, if you have any question.
 
 ## License
 
